@@ -44,6 +44,7 @@ filetype plugin indent on    " required
 
 set number
 
+set shell=/bin/bash
 " vim-colors-solarized configuration
 syntax enable
 set background=dark
