@@ -49,7 +49,9 @@ set shell=/bin/bash
 syntax enable
 set background=dark
 let g:solarized_termcolors=256
-colorscheme solarized
+if !empty(glob(".vim/bundle/vim-colors-solarized"))
+  colorscheme solarized
+endif
 
 " vim-airline configuration
 let g:airline#extensions#tabline#enabled = 1
