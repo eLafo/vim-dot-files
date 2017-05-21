@@ -49,7 +49,8 @@ set shell=/bin/bash
 syntax enable
 set background=dark
 let g:solarized_termcolors=256
-if !empty(glob(".vim/bundle/vim-colors-solarized"))
+
+if !empty(glob("~/.vim/bundle/vim-colors-solarized"))
   colorscheme solarized
 endif
 
