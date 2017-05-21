@@ -27,6 +27,8 @@ Plugin 'tpope/vim-rails'
 
 Plugin 'ekalinin/dockerfile.vim'
 
+Plugin 'scrooloose/nerdcommenter'
+
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -43,7 +45,9 @@ filetype plugin indent on    " required
 " Put your non-Plugin stuff after this line
 
 set number
-
+set expandtab
+set tabstop=2
+set shiftwidth=2
 set shell=/bin/bash
 " vim-colors-solarized configuration
 syntax enable
@@ -59,3 +63,8 @@ let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#left_sep = ' '
 let g:airline#extensions#tabline#left_alt_sep = '|'
 let g:airline_theme='light'
+
+" mappings
+
+" leader
+let mapleader = ","
