@@ -29,6 +29,21 @@ Plugin 'ekalinin/dockerfile.vim'
 
 Plugin 'scrooloose/nerdcommenter'
 
+Plugin 'scrooloose/nerdtree'
+
+Plugin 'Xuyuanp/nerdtree-git-plugin'
+
+Plugin 'karlbright/qfdo.vim'
+
+Plugin 'scrooloose/syntastic'
+Plugin 'ngmy/vim-rubocop'
+
+Plugin 'thoughtbot/vim-rspec'
+
+Plugin 'szw/vim-maximizer'
+
+Plugin 'tpope/vim-endwise'
+
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -49,6 +64,8 @@ set expandtab
 set tabstop=2
 set shiftwidth=2
 set shell=/bin/bash
+set smartindent
+set scrolloff=2
 " vim-colors-solarized configuration
 syntax enable
 set background=dark
@@ -58,13 +75,54 @@ if !empty(glob("~/.vim/bundle/vim-colors-solarized"))
   colorscheme solarized
 endif
 
+"qfdo"
+set autowrite
+
+"syntastic & rubocop"
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+let g:syntastic_ruby_checkers = ['rubocop']
+
 " vim-airline configuration
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#left_sep = ' '
 let g:airline#extensions#tabline#left_alt_sep = '|'
 let g:airline_theme='light'
 
+"vim-rspec
+map <Leader>t :call RunCurrentSpecFile()<CR>
+map <Leader>s :call RunNearestSpec()<CR>
+map <Leader>l :call RunLastSpec()<CR>
+map <Leader>a :call RunAllSpecs()<CR>
+
+"vim-maximizer
+map <F2> :Copen
+map , :ccl
+
+let g:rspec_command = "Dispatch rspec {spec}"
+"silversearcher
+" The Silver Searcher
+if executable('ag')
+  " Use ag over grep
+  set grepprg=ag\ --nogroup\ --nocolor
+
+  " Use ag in CtrlP for listing files. Lightning fast and respects .gitignore
+  let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
+
+  " ag is fast enough that CtrlP doesn't need to cache
+  let g:ctrlp_use_caching = 0
+endif
 " mappings
 
 " leader
-let mapleader = ","
+let mapleader = "\<Space>"
+
+" bind K to grep word under cursor
+nnoremap K :grep! "\b<C-R><C-W>\b"<CR>:cw<CR>
+
+" bind \ (backward slash) to grep shortcut
+nnoremap \ :Ag<SPACE>
+
