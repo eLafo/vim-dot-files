@@ -2,9 +2,12 @@
 vim configuration to be used with homesick
 
 # Requirements
-You need to have [homesick](https://github.com/technicalpickles/homesick) installed
+You need to have
+- [homesick](https://github.com/technicalpickles/homesick) installed
+- git
+- vim
 
 # Installation
 ```
-homesick clone elafo/vim-dot-files && homesick link vim-dot-files && vim +PluginInstall +qall
+homesick clone elafo/vim-dot-files && homesick symlink vim-dot-files && vim +PluginInstall +qall
 ```
