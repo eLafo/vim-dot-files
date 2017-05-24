@@ -70,12 +70,14 @@ if !empty(glob("~/.vim/bundle/vim-colors-solarized"))
 endif
 
 "syntastic & rubocop"
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
-let g:syntastic_ruby_checkers = ['rubocop']
+if !empty(glob("~/.vim/bundle/sytastic"))
+  set statusline+=%#warningmsg#
+  set statusline+=%{SyntasticStatuslineFlag()}
+  set statusline+=%*
+  let g:syntastic_check_on_open = 1
+  let g:syntastic_check_on_wq = 0
+  let g:syntastic_ruby_checkers = ['rubocop']
+end
 
 " vim-airline configuration
 let g:airline#extensions#tabline#enabled = 1
