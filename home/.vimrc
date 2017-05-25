@@ -38,6 +38,7 @@ Plugin 'ngmy/vim-rubocop'
 
 Plugin 'tpope/vim-endwise'
 
+Plugin 'thoughtbot/vim-rspec'
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -88,4 +89,8 @@ let g:airline_theme='light'
 " leader
 let mapleader = ","
 
-
+" vim-rspec
+map <Leader>t :call RunCurrentSpecFile()<CR>
+map <Leader>s :call RunNearestSpec()<CR>
+map <Leader>l :call RunLastSpec()<CR>
+map <Leader>a :call RunAllSpecs()<CR>
