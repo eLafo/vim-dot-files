@@ -39,6 +39,8 @@ Plugin 'ngmy/vim-rubocop'
 Plugin 'tpope/vim-endwise'
 
 Plugin 'thoughtbot/vim-rspec'
+
+Plugin 'tpope/vim-surround'
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
