@@ -41,6 +41,8 @@ Plugin 'tpope/vim-endwise'
 Plugin 'thoughtbot/vim-rspec'
 
 Plugin 'tpope/vim-surround'
+
+Plugin 'airblade/vim-gitgutter'
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -99,3 +101,6 @@ map <Leader>a :call RunAllSpecs()<CR>
 
 " search
 set incsearch
+
+" update time
+set updatetime=250
