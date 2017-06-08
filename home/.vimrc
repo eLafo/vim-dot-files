@@ -31,7 +31,7 @@ Plugin 'scrooloose/nerdcommenter'
 
 Plugin 'scrooloose/nerdtree'
 
-" Plugin 'Xuyuanp/nerdtree-git-plugin'
+Plugin 'Xuyuanp/nerdtree-git-plugin'
 
 Plugin 'scrooloose/syntastic'
 Plugin 'ngmy/vim-rubocop'
