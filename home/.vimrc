@@ -43,6 +43,9 @@ Plugin 'thoughtbot/vim-rspec'
 Plugin 'tpope/vim-surround'
 
 Plugin 'airblade/vim-gitgutter'
+
+Plugin 'mileszs/ack.vim'
+
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -104,3 +107,8 @@ set incsearch
 
 " update time
 set updatetime=250
+
+" use silversearch
+if executable('ag')
+  let g:ackprg = 'ag --vimgrep'
+endif
