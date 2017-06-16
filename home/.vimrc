@@ -69,7 +69,9 @@ set smartindent
 set scrolloff=2
 
 syntax enable
-colorscheme new-railscasts
+if !empty(glob("~/.vim/bundle/new-railscasts"))
+  colorscheme new-railscasts
+endif
 
 "syntastic & rubocop"
 if !empty(glob("~/.vim/bundle/sytastic"))
