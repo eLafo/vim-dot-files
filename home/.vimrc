@@ -15,7 +15,7 @@ Plugin 'vim-airline/vim-airline-themes'
 
 Plugin 'tpope/vim-fugitive'
 
-Plugin 'altercation/vim-colors-solarized'
+Plugin 'carakan/new-railscasts-theme'
 
 Plugin 'ctrlpvim/ctrlp.vim'
 
@@ -45,7 +45,6 @@ Plugin 'tpope/vim-surround'
 Plugin 'airblade/vim-gitgutter'
 
 Plugin 'mileszs/ack.vim'
-
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -68,14 +67,9 @@ set shiftwidth=2
 set shell=/bin/bash
 set smartindent
 set scrolloff=2
-" vim-colors-solarized configuration
-syntax enable
-set background=dark
-let g:solarized_termcolors=256
 
-if !empty(glob("~/.vim/bundle/vim-colors-solarized"))
-  colorscheme solarized
-endif
+syntax enable
+colorscheme new-railscasts
 
 "syntastic & rubocop"
 if !empty(glob("~/.vim/bundle/sytastic"))
