@@ -108,3 +108,6 @@ set updatetime=250
 if executable('ag')
   let g:ackprg = 'ag --vimgrep'
 endif
+
+" ctrlp configuration
+let g:ctrlp_show_hidden = 1
