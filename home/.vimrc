@@ -45,6 +45,8 @@ Plugin 'tpope/vim-surround'
 Plugin 'airblade/vim-gitgutter'
 
 Plugin 'mileszs/ack.vim'
+
+Plugin 'tpope/vim-liquid'
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
