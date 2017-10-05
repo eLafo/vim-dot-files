@@ -71,7 +71,7 @@ set smartindent
 set scrolloff=2
 
 syntax enable
-if !empty(glob("~/.vim/bundle/new-railscasts"))
+if !empty(glob("~/.vim/bundle/new-railscasts-theme"))
   colorscheme new-railscasts
 endif
 
