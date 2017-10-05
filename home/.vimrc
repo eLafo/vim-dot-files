@@ -111,5 +111,6 @@ if executable('ag')
   let g:ackprg = 'ag --vimgrep'
 endif
 
-" ctrlp configuration
+" show hidden files
 let g:ctrlp_show_hidden = 1
+let NERDTreeShowHidden=1
