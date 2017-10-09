@@ -47,6 +47,8 @@ Plugin 'airblade/vim-gitgutter'
 Plugin 'mileszs/ack.vim'
 
 Plugin 'tpope/vim-liquid'
+
+Plugin 'christoomey/vim-tmux-navigator'
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -69,12 +71,6 @@ set shiftwidth=2
 set shell=/bin/bash
 set smartindent
 set scrolloff=2
-
-" Moving around
-nnoremap <C-J> <C-W><C-J>
-nnoremap <C-K> <C-W><C-K>
-nnoremap <C-L> <C-W><C-L>
-nnoremap <C-H> <C-W><C-H>
 
 " More natural opening
 set splitbelow
