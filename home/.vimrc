@@ -70,6 +70,15 @@ set shell=/bin/bash
 set smartindent
 set scrolloff=2
 
+" Moving around
+nnoremap <C-J> <C-W><C-J>
+nnoremap <C-K> <C-W><C-K>
+nnoremap <C-L> <C-W><C-L>
+nnoremap <C-H> <C-W><C-H>
+
+" More natural opening
+set splitbelow
+set splitright
 syntax enable
 if !empty(glob("~/.vim/bundle/new-railscasts-theme"))
   colorscheme new-railscasts
@@ -114,3 +123,4 @@ endif
 " show hidden files
 let g:ctrlp_show_hidden = 1
 let NERDTreeShowHidden=1
+
