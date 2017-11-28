@@ -51,6 +51,7 @@ Plugin 'tpope/vim-liquid'
 Plugin 'christoomey/vim-tmux-navigator'
 
 Plugin 'Yggdroot/indentLine'
+
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -136,3 +137,7 @@ highlight link SyntasticErrorSign SignColumn
 highlight link SyntasticWarningSign SignColumn
 highlight link SyntasticStyleErrorSign SignColumn
 highlight link SyntasticStyleWarningSign SignColumn
+
+" ruby folding
+let g:ruby_fold = 1
+let g:ruby_foldable_groups = 'def #'
