@@ -35,6 +35,7 @@ Plugin 'Xuyuanp/nerdtree-git-plugin'
 
 Plugin 'scrooloose/syntastic'
 Plugin 'ngmy/vim-rubocop'
+Plugin 'mtscout6/syntastic-local-eslint.vim'
 
 Plugin 'tpope/vim-endwise'
 
