@@ -142,3 +142,7 @@ highlight link SyntasticStyleWarningSign SignColumn
 " ruby folding
 let g:ruby_fold = 1
 let g:ruby_foldable_groups = 'def #'
+
+" custom mappings
+nmap <CR> o<ESC>k
+nmap <S-Enter> O<Esc>j
