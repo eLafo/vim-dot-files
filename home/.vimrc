@@ -163,3 +163,4 @@ nmap <S-Enter> O<Esc>j
 
 " NERDcommenter
 let g:NERDSpaceDelims = 1
+let g:NERDCustomDelimiters = { 'eruby.yaml': { 'left': '#' } }
