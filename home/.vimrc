@@ -56,6 +56,8 @@ Plugin 'Yggdroot/indentLine'
 
 Plugin 'godlygeek/tabular'
 Plugin 'plasticboy/vim-markdown'
+
+Plugin 'tpope/vim-dispatch'
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
