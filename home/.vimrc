@@ -166,3 +166,6 @@ nmap <S-Enter> O<Esc>j
 " NERDcommenter
 let g:NERDSpaceDelims = 1
 let g:NERDCustomDelimiters = { 'eruby.yaml': { 'left': '#' } }
+
+" ctrlp
+let g:ctrlp_custom_ignore = '\v[\/](node_modules|target|dist|_site)|(\.(swp|git|svn|sass-cache))$'
