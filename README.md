@@ -6,6 +6,7 @@ You need to have
 - [homesick](https://github.com/technicalpickles/homesick) installed
 - git
 - vim
+- ack-grep
 
 # Installation
 ```
