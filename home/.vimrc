@@ -174,3 +174,12 @@ let g:NERDCustomDelimiters = { 'eruby.yaml': { 'left': '#' } }
 
 " ctrlp
 let g:ctrlp_custom_ignore = '\v[\/](node_modules|target|dist|_site)|(\.(swp|git|svn|sass-cache))$'
+
+" nerdtree
+" copied unshamelessly from https://medium.com/@victormours/a-better-nerdtree-setup-3d3921abc0b9
+nnoremap <silent> <Leader>v :NERDTreeFind<CR>
+let NERDTreeQuitOnOpen = 1
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
+let NERDTreeAutoDeleteBuffer = 1
+let NERDTreeMinimalUI = 1
+let NERDTreeDirArrows = 1
