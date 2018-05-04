@@ -177,6 +177,8 @@ let g:ctrlp_custom_ignore = '\v[\/](node_modules|target|dist|_site)|(\.(swp|git|
 
 " nerdtree
 " copied unshamelessly from https://medium.com/@victormours/a-better-nerdtree-setup-3d3921abc0b9
+autocmd StdinReadPre * let s:std_in=1
+autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 nnoremap <silent> <Leader>v :NERDTreeFind<CR>
 let NERDTreeQuitOnOpen = 1
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
